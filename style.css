@@ -1,0 +1,536 @@
+/* ==================================== */
+/* 1. PALET WARNA */
+/* ==================================== */
+:root {
+    --hijau-tua: #1B3F2B;
+    --hijau-sedang: #467451;
+    --hijau-muda: #B2C9BA;
+    --putih-gading: #F5F7F3;
+}
+
+/* ==================================== */
+/* 2. GLOBAL STYLES */
+/* ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--hijau-tua);
+    background-color: var(--putih-gading);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+/* ==================================== */
+/* 3. NAVBAR */
+/* ==================================== */
+.navbar {
+    background: var(--hijau-tua);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--putih-gading);
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: var(--hijau-tua);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--putih-gading);
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+.hamburger-menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    color: var(--putih-gading);
+}
+
+/* ==================================== */
+/* 4. HERO SECTION */
+/* ==================================== */
+.hero-section {
+    height: 80vh;
+    background: url('./image/background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons .btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.btn-primary {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* ==================================== */
+/* 5. GEOGRAFIS SECTION */
+/* ==================================== */
+.geografis-section {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.geografis-section h2 {
+    color: var(--hijau-tua);
+}
+
+.geografis-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.geografis-info img {
+    border-radius: 10px;
+    border: 5px solid var(--hijau-sedang);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+}
+
+.data-demografis {
+    margin-top: 2rem;
+}
+
+/* ==================================== */
+/* 6. SEJARAH SECTION */
+/* ==================================== */
+.sejarah-page {
+    padding: 3rem 0;
+    background-color: var(--hijau-muda);
+}
+
+.sejarah-header {
+    background-color: var(--putih-gading);
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sejarah-header h1 {
+    margin: 0;
+    color: var(--hijau-tua);
+}
+
+.sejarah-alur {
+    background-color: var(--putih-gading);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.alur-cerita-nav {
+    margin-top: 3rem;
+    text-align: center;
+    background-color: var(--hijau-tua);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.alur-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.alur-card {
+    background-color: var(--hijau-sedang);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    width: 150px;
+}
+
+.alur-number {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* ==================================== */
+/* 7. LEMBAGA SECTION */
+/* ==================================== */
+.lembaga-section {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.lembaga-section h2 {
+    color: var(--hijau-sedang);
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.lembaga-section h3 {
+    color: var(--hijau-tua);
+    margin-top: -1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.lembaga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.lembaga-card {
+    background-color: var(--putih-gading);
+    border: 2px solid var(--hijau-sedang);
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.lembaga-card img {
+    width: 60px;
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.btn-dokumentasi {
+    display: inline-block;
+    background-color: var(--hijau-sedang);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+/* ==================================== */
+/* 8. UMKM SECTION */
+/* ==================================== */
+.umkm-section {
+    padding: 3rem 0;
+    background-color: var(--hijau-muda);
+    text-align: center;
+}
+
+.umkm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Sesuaikan grid untuk tampilan desktop */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.umkm-card {
+    background-color: white;
+    border: 2px solid var(--hijau-sedang);
+    border-radius: 10px;
+    text-align: left;
+    overflow: hidden;
+    display: flex; /* Gunakan flexbox untuk tata letak gambar dan info */
+    align-items: flex-start; /* Ratakan konten ke atas */
+    padding: 1rem; /* Tambahkan padding ke kartu */
+}
+
+/* Perbaikan penting di sini untuk gambar UMKM */
+.umkm-card img {
+    width: 120px; /* Ukuran lebih kecil untuk gambar */
+    height: auto;
+    max-height: 120px; /* Batasi tinggi maksimum */
+    object-fit: contain; /* Pertahankan rasio aspek gambar */
+    display: block;
+    margin-right: 1rem; /* Beri jarak antara gambar dan teks */
+    flex-shrink: 0; /* Pastikan gambar tidak menyusut */
+}
+
+.umkm-info {
+    padding: 0; /* Hapus padding yang tumpang tindih */
+    flex-grow: 1; /* Biarkan info mengambil ruang yang tersisa */
+}
+
+.umkm-kontak {
+    background-color: var(--hijau-sedang);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.umkm-kontak img {
+    width: 30px;
+    height: 30px;
+}
+
+/* ==================================== */
+/* 9. STRUKTUR ORGANISASI PAGE */
+/* ==================================== */
+.struktur-page {
+    text-align: center;
+}
+
+.struktur-header {
+    background-color: var(--hijau-muda);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+.struktur-organisasi-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    font-size: 0.9rem;
+}
+
+.struktur-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--hijau-tua);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ==================================== */
+/* 10. FOOTER */
+/* ==================================== */
+.footer {
+    background-color: var(--hijau-tua);
+    color: var(--putih-gading);
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer h4 {
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: var(--hijau-muda);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+/* ==================================== */
+/* 11. MEDIA QUERIES (RESPONSIVENESS) */
+/* ==================================== */
+@media (min-width: 768px) {
+    /* Navbar */
+    .navbar .container {
+        justify-content: space-around;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        box-shadow: none;
+        width: auto;
+        padding: 0;
+    }
+    .nav-links a {
+        color: var(--putih-gading);
+        margin: 0 1.5rem;
+    }
+    .hamburger-menu {
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero-section h1 {
+        font-size: 4rem;
+    }
+    
+    .stats-section .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .about-section .content-row {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .about-section .text-content {
+        flex: 1;
+    }
+    
+    .about-section .image-content {
+        flex: 1;
+    }
+    
+    .berita-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Halaman Sejarah - Perbaikan untuk desktop */
+    .alur-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    /* Papan Pengumuman */
+    .pengumuman-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .pengumuman-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Tabel Informasi */
+    .tabel-info {
+        background-color: var(--putih-gading);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .tabel-info table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+    }
+
+    .tabel-info th, .tabel-info td {
+        border: 1px solid var(--hijau-muda);
+        padding: 12px;
+        text-align: left;
+    }
+
+    .tabel-info th {
+        background-color: var(--hijau-sedang);
+        color: white;
+        font-weight: bold;
+    }
+    
+    .tabel-info tr:nth-child(even) {
+        background-color: var(--putih-gading);
+    }
+
+    /* Footer - Tampilan Desktop */
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
